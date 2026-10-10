@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="校园资讯详情——查看正文、浏览量统计、发表评论、校园之声播放" />
+  <title>资讯详情 - 校园生活助手</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 头部导航 ============ -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-icon">🎓</span>
+        <span>校园生活助手</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="list.html">资讯</a>
+        <a href="list.html?category=校园活动&v=2">活动</a>
+        <a href="list.html?category=学术讲座&v=2">讲座</a>
+        <a href="list.html?category=校园公告&v=2">公告</a>
+        <a href="list.html?category=校园生活&v=2">生活</a>
+        <a href="list.html?category=志愿服务&v=2">志愿</a>
+      </nav>
+      <!-- 登录态区域：由 common.js 渲染 -->
+      <div class="auth-area" id="authArea"></div>
+    </div>
+  </header>
+
+  <!-- ============ 主区域 ============ -->
+  <main class="container">
+
+    <!-- 返回链接 -->
+    <p style="margin:14px 0"><a href="list.html" style="color:var(--color-primary);font-size:0.88rem">← 返回资讯列表</a></p>
+
+    <!-- 详情布局：主内容 + 侧栏（桌面端两栏） -->
+    <div class="detail-layout">
+      <!-- 主内容 -->
+      <article>
+        <!-- 封面 -->
+        <div class="detail-cover" id="detailCover"></div>
+        <!-- 操作按钮（自定义文章才显示） -->
+        <div id="detailActions" style="margin-bottom:8px"></div>
+        <!-- 标签 + 标题 -->
+        <span class="detail-tag" id="detailTag"></span>
+        <h1 class="detail-title" id="detailTitle"></h1>
+        <!-- 元信息 -->
+        <div class="detail-meta" id="detailMeta"></div>
+        <!-- 正文 -->
+        <div class="detail-content" id="detailContent"></div>
+
+        <!-- 校园之声播放器（Web Audio 合成，离线可用） -->
+        <section class="media-box" aria-label="校园之声">
+          <h4>📻 校园之声 · 报时铃声</h4>
+          <p style="font-size:0.82rem;color:var(--color-text-light);margin-bottom:12px">使用 Web Audio API 合成，无需加载音频文件，点击播放。</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <button class="btn btn-primary" id="chimeBtn">▶ 播放</button>
+            <span id="chimeStatus" style="font-size:0.86rem;color:var(--color-text-light)">校园之声 · 报时铃声</span>
+          </div>
+        </section>
+
+        <!-- 评论区 -->
+        <section class="comments" aria-label="评论区">
+          <h3>评论区（<span id="commentCount">0</span>）</h3>
+          <div class="comment-list" id="commentList"></div>
+
+          <!-- 评论表单 -->
+          <form class="form-card" id="commentForm" novalidate>
+            <div class="form-group" data-field="name">
+              <label for="c-name">昵称 <span class="req">*</span></label>
+              <input id="c-name" name="name" type="text" maxlength="20" placeholder="2-20 字" />
+              <div class="err-msg"></div>
+            </div>
+            <div class="form-group" data-field="body">
+              <label for="c-body">评论内容 <span class="req">*</span></label>
+              <textarea id="c-body" name="body" maxlength="200" placeholder="2-200 字，文明发言"></textarea>
+              <div class="err-msg"></div>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">发表评论</button>
+            </div>
+          </form>
+        </section>
+      </article>
+
+      <!-- 侧栏：相关推荐（语义化 aside） -->
+      <aside class="detail-aside" aria-label="相关推荐">
+        <div class="section-head"><h2>相关推荐</h2></div>
+        <div id="relatedBox" style="display:flex;flex-direction:column;gap:10px"></div>
+      </aside>
+    </div>
+
+  </main>
+
+  <!-- ============ 底部栏 ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">校园生活助手 Campus Life Assistant</div>
+        <p class="footer-desc">面向高校师生的校园资讯聚合工具，HTML5 + CSS3 + 原生 JavaScript 实现，数据本地持久化。</p>
+        <nav class="footer-links" aria-label="页脚导航">
+          <a href="index.html">首页</a>
+          <a href="list.html">资讯列表</a>
+          <a href="detail.html?id=101">详情示例</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        © 2026 校园生活助手 · HTML5 实训项目 · 仅供教学演示
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <button class="back-top" aria-label="返回顶部">↑</button>
+
+  <!-- 移动端底部 Tab 导航 -->
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="index.html"><span class="tb-icon">🏠</span>首页</a>
+    <a href="list.html"><span class="tb-icon">📰</span>资讯</a>
+    <a href="list.html?category=校园活动&v=2"><span class="tb-icon">🎉</span>活动</a>
+    <a href="detail.html?id=106"><span class="tb-icon">🔖</span>示例</a>
+  </nav>
+
+  <!-- ES6 模块 -->
+  <script type="module" src="js/detail.js?v=5"></script>
+</body>
+</html>
