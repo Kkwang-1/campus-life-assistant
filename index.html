@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <!-- 移动端 viewport，避免布局溢出与点击延迟 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="校园生活助手——聚合校园资讯、活动、公告、生活服务的一站式响应式 Web 应用" />
+  <meta name="theme-color" content="#2f7a4e" />
+  <title>校园生活助手 - 首页</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 头部导航（语义化 header/nav） ============ -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-icon">🎓</span>
+        <span>校园生活助手</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="list.html">资讯</a>
+        <a href="list.html?category=校园活动&v=2">活动</a>
+        <a href="list.html?category=学术讲座&v=2">讲座</a>
+        <a href="list.html?category=校园公告&v=2">公告</a>
+        <a href="list.html?category=校园生活&v=2">生活</a>
+        <a href="list.html?category=志愿服务&v=2">志愿</a>
+      </nav>
+      <!-- 登录态区域：由 common.js 渲染 -->
+      <div class="auth-area" id="authArea"></div>
+    </div>
+  </header>
+
+  <!-- ============ 主区域 ============ -->
+  <main class="container">
+
+    <!-- 英雄区：Canvas 粒子背景 -->
+    <section class="hero" aria-label="欢迎">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <h1>你的校园生活，一手掌握</h1>
+        <p>聚合校园资讯、活动公告、生活服务，响应式适配手机与桌面，数据本地持久化，离线也能用。</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="list.html">浏览资讯</a>
+          <a class="btn btn-outline" href="#quick">快速入口</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 焦点头条（JS 动态渲染） -->
+    <section aria-label="焦点头条">
+      <div class="section-head">
+        <h2>🔥 焦点头条</h2>
+      </div>
+      <a id="focusBox" class="focus-banner" href="list.html">
+        <div class="fb-media skeleton"></div>
+        <div class="fb-body">
+          <span class="fb-tag">加载中</span>
+          <h3>正在获取头条…</h3>
+          <p>请稍候</p>
+          <span class="fb-more">阅读全文 →</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- 数字看板（数字滚动动画，JS 驱动） -->
+    <section class="stats-strip" aria-label="平台数据">
+      <div class="stat-item">
+        <strong class="stat-num" data-target="0" id="statArticles">0</strong>
+        <span class="stat-label">校园资讯</span>
+      </div>
+      <div class="stat-item">
+        <strong class="stat-num" data-target="0" id="statViews">0</strong>
+        <span class="stat-label">累计浏览</span>
+      </div>
+      <div class="stat-item">
+        <strong class="stat-num" data-target="0" id="statCats">0</strong>
+        <span class="stat-label">内容分类</span>
+      </div>
+      <div class="stat-item">
+        <strong class="stat-num" data-target="0" id="statWeek">0</strong>
+        <span class="stat-label">本周活动</span>
+      </div>
+    </section>
+
+    <!-- 快捷入口 -->
+    <section id="quick" aria-label="快捷入口">
+      <div class="section-head">
+        <h2>快捷入口</h2>
+      </div>
+      <div class="quick-grid">
+        <a class="quick-card" href="list.html">
+          <div class="qc-icon">📰</div>
+          <div class="qc-text"><strong>校园资讯</strong><span>最新动态</span></div>
+        </a>
+        <a class="quick-card" href="list.html?category=校园活动&v=2">
+          <div class="qc-icon">🎉</div>
+          <div class="qc-text"><strong>校园活动</strong><span>精彩不断</span></div>
+        </a>
+        <a class="quick-card" href="list.html?category=校园公告&v=2">
+          <div class="qc-icon">📢</div>
+          <div class="qc-text"><strong>校园公告</strong><span>重要通知</span></div>
+        </a>
+        <a class="quick-card" href="list.html?category=校园生活&v=2">
+          <div class="qc-icon">🍱</div>
+          <div class="qc-text"><strong>校园生活</strong><span>食堂·日常</span></div>
+        </a>
+        <a class="quick-card" href="list.html?category=志愿服务&v=2">
+          <div class="qc-icon">🌱</div>
+          <div class="qc-text"><strong>志愿服务</strong><span>奉献爱心</span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 热门排行榜（JS 动态渲染） -->
+    <section aria-label="热门排行榜">
+      <div class="section-head">
+        <h2>🏆 热门排行榜</h2>
+        <a href="list.html">完整榜单 →</a>
+      </div>
+      <div class="rank-box" id="rankBox">
+        <p class="empty-state">榜单加载中…</p>
+      </div>
+    </section>
+
+    <!-- Canvas 数据可视化 -->
+    <section aria-label="本周活动统计">
+      <div class="section-head">
+        <h2>数据一览</h2>
+        <a href="list.html">查看全部 →</a>
+      </div>
+      <div class="chart-card">
+        <h3>本周校园活动统计</h3>
+        <p class="chart-desc">基于校园活动报名数据，Canvas 手绘柱状图</p>
+        <div class="chart-wrap">
+          <canvas id="statsCanvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 精选资讯（JS 动态渲染） -->
+    <section aria-label="精选资讯">
+      <div class="section-head">
+        <h2>精选资讯</h2>
+        <a href="list.html">更多 →</a>
+      </div>
+      <div class="article-list" id="featuredBox">
+        <!-- 骨架屏由 home.js 注入 -->
+      </div>
+    </section>
+
+    <!-- 近期动态时间线（JS 动态渲染） -->
+    <section aria-label="近期动态">
+      <div class="section-head">
+        <h2>🕒 近期动态</h2>
+        <a href="list.html">更多 →</a>
+      </div>
+      <div class="timeline" id="timelineBox">
+        <p class="empty-state">动态加载中…</p>
+      </div>
+    </section>
+
+    <!-- 每日一句（JS 轮播） -->
+    <section class="quote-section" aria-label="每日一句">
+      <div class="quote-card" id="quoteCard">
+        <span class="quote-mark">“</span>
+        <p id="quoteText">加载中…</p>
+        <span class="quote-author" id="quoteAuthor"></span>
+      </div>
+    </section>
+
+    <!-- 平台特色 -->
+    <section aria-label="平台特色">
+      <div class="section-head">
+        <h2>✨ 平台特色</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="fc-emoji">📱</div>
+          <h3>全端自适应</h3>
+          <p>移动优先设计，手机、平板、电脑访问均有最佳布局，随时随地查看校园动态。</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-emoji">💾</div>
+          <h3>数据本地持久化</h3>
+          <p>基于 LocalStorage 保存资讯、评论与账户信息，刷新页面数据不丢失，弱网也能用。</p>
+        </div>
+        <div class="feature-card">
+          <div class="fc-emoji">🎨</div>
+          <h3>原生 HTML5 能力</h3>
+          <p>Canvas 动画与图表、Fetch 数据加载、Web Audio 铃声合成，零框架依赖，轻量高效。</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 底部栏（语义化 footer） ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">校园生活助手 Campus Life Assistant</div>
+        <p class="footer-desc">面向高校师生的校园资讯聚合工具，HTML5 + CSS3 + 原生 JavaScript 实现，数据本地持久化。</p>
+        <nav class="footer-links" aria-label="页脚导航">
+          <a href="index.html">首页</a>
+          <a href="list.html">资讯列表</a>
+          <a href="detail.html?id=101">详情示例</a>
+          <a href="list.html?category=校园活动&v=2">校园活动</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        © 2026 校园生活助手 · HTML5 实训项目 · 仅供教学演示
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <button class="back-top" aria-label="返回顶部">↑</button>
+
+  <!-- 移动端底部 Tab 导航 -->
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="index.html"><span class="tb-icon">🏠</span>首页</a>
+    <a href="list.html"><span class="tb-icon">📰</span>资讯</a>
+    <a href="list.html?category=校园活动&v=2"><span class="tb-icon">🎉</span>活动</a>
+    <a href="detail.html?id=106"><span class="tb-icon">🔖</span>示例</a>
+  </nav>
+
+  <!-- ES6 模块（type=module） -->
+  <script type="module" src="js/home.js?v=3"></script>
+</body>
+</html>
