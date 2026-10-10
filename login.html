@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="校园生活助手登录/注册——账户信息保存在本地浏览器" />
+  <title>登录 / 注册 - 校园生活助手</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+
+  <!-- ============ 头部导航 ============ -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-icon">🎓</span>
+        <span>校园生活助手</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="list.html">资讯</a>
+        <a href="list.html?category=校园活动&v=2">活动</a>
+        <a href="list.html?category=学术讲座&v=2">讲座</a>
+        <a href="list.html?category=校园公告&v=2">公告</a>
+        <a href="list.html?category=校园生活&v=2">生活</a>
+        <a href="list.html?category=志愿服务&v=2">志愿</a>
+      </nav>
+      <!-- 登录态区域：由 common.js 渲染 -->
+      <div class="auth-area" id="authArea"></div>
+    </div>
+  </header>
+
+  <!-- ============ 主区域：登录卡片 ============ -->
+  <main class="auth-main">
+    <div class="auth-card">
+
+      <div class="auth-card-head">
+        <div class="auth-logo">🎓</div>
+        <h1>校园生活助手</h1>
+        <p>登录后可发布资讯、发表评论</p>
+      </div>
+
+      <!-- Tab 切换 -->
+      <div class="auth-tabs" role="tablist">
+        <button class="auth-tab active" data-target="panel-login" role="tab">登录</button>
+        <button class="auth-tab" data-target="panel-register" role="tab">注册</button>
+      </div>
+
+      <!-- 登录面板 -->
+      <div class="auth-panel active" id="panel-login" role="tabpanel">
+        <form id="loginForm" novalidate>
+          <div class="form-group" data-field="username">
+            <label for="l-username">用户名</label>
+            <input id="l-username" name="username" type="text" maxlength="20" placeholder="请输入用户名" autocomplete="username" />
+            <div class="err-msg"></div>
+          </div>
+          <div class="form-group" data-field="password">
+            <label for="l-password">密码</label>
+            <input id="l-password" name="password" type="password" maxlength="20" placeholder="请输入密码" autocomplete="current-password" />
+            <div class="err-msg"></div>
+          </div>
+          <button type="submit" class="btn btn-primary auth-submit">登 录</button>
+        </form>
+      </div>
+
+      <!-- 注册面板 -->
+      <div class="auth-panel" id="panel-register" role="tabpanel">
+        <form id="registerForm" novalidate>
+          <div class="form-group" data-field="username">
+            <label for="r-username">用户名</label>
+            <input id="r-username" name="username" type="text" maxlength="20" placeholder="2-20 位，中英文/数字/下划线" autocomplete="username" />
+            <div class="err-msg"></div>
+          </div>
+          <div class="form-group" data-field="email">
+            <label for="r-email">邮箱</label>
+            <input id="r-email" name="email" type="email" placeholder="例如 name@campus.edu" autocomplete="email" />
+            <div class="err-msg"></div>
+          </div>
+          <div class="form-group" data-field="password">
+            <label for="r-password">密码</label>
+            <input id="r-password" name="password" type="password" maxlength="20" placeholder="6-20 位，需含字母和数字" autocomplete="new-password" />
+            <div class="err-msg"></div>
+          </div>
+          <div class="form-group" data-field="confirm">
+            <label for="r-confirm">确认密码</label>
+            <input id="r-confirm" name="confirm" type="password" maxlength="20" placeholder="请再次输入密码" autocomplete="new-password" />
+            <div class="err-msg"></div>
+          </div>
+          <button type="submit" class="btn btn-primary auth-submit">注 册</button>
+        </form>
+      </div>
+
+      <!-- 演示账号提示 -->
+      <div class="auth-tip">
+        💡 演示账号：<strong>student</strong> / 密码 <strong>123456</strong>（数据仅保存在本浏览器）
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============ 底部栏 ============ -->
+  <footer class="site-footer auth-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        © 2026 校园生活助手 · HTML5 实训项目 · 仅供教学演示
+      </div>
+    </div>
+  </footer>
+
+  <!-- ES6 模块 -->
+  <script type="module" src="js/login.js?v=2"></script>
+</body>
+</html>
