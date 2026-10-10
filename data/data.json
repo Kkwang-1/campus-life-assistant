@@ -1,0 +1,186 @@
+{
+  "articles": [
+    {
+      "id": 101,
+      "title": "2026年春季校园运动会圆满落幕",
+      "category": "校园活动",
+      "date": "2026-04-15",
+      "author": "校学生会",
+      "views": 1280,
+      "summary": "为期三天的春季运动会在全校师生的共同努力下圆满结束，共打破 12 项校纪录，涌现出大批体育新秀。",
+      "content": "4月13日至15日，我校2026年春季田径运动会在主体育场隆重举行。本次运动会共设立田赛、径赛、球类等28个大项，参赛运动员达1500余人。开幕式上，各学院方阵步伐整齐、口号响亮，展现了新时代大学生的精神风貌。比赛期间，运动员们奋勇拼搏，共打破12项校纪录，其中男子100米纪录被刷新为10秒82。最终信息工程学院夺得团体总分第一。本次运动会不仅检验了体育教学成果，更增强了集体凝聚力与校园活力。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=campus%20sports%20track%20field%20with%20students%20running%20race%20crowd%20cheering%20sunny%20day&image_size=landscape_16_9"
+    },
+    {
+      "id": 102,
+      "title": "人工智能前沿技术讲座顺利举办",
+      "category": "学术讲座",
+      "date": "2026-04-12",
+      "author": "计算机学院",
+      "views": 856,
+      "summary": "清华大学张教授受邀来校，为师生带来《大模型与未来教育》主题讲座，现场座无虚席。",
+      "content": "4月12日下午，由计算机学院主办的人工智能前沿技术讲座在大学生活动中心报告厅举行。清华大学张教授以《大模型与未来教育》为题，深入浅出地讲解了Transformer架构、大语言模型的训练方法以及AIGC在教育领域的应用前景。讲座现场座无虚席，互动环节同学们踊跃提问，气氛热烈。本次讲座拓宽了同学们的学术视野，也为后续相关课程学习与科研选题提供了启发。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20lecture%20hall%20students%20listening%20to%20technology%20presentation%20stage%20screens&image_size=landscape_16_9"
+    },
+    {
+      "id": 103,
+      "title": "第十届校园文化艺术节盛大开幕",
+      "category": "校园活动",
+      "date": "2026-04-10",
+      "author": "校团委",
+      "views": 2104,
+      "summary": "以青春·梦想·未来为主题的校园文化艺术节开幕，晚会节目精彩纷呈，点亮初夏校园。",
+      "content": "4月10日晚，第十届校园文化艺术节开幕式晚会于露天剧场举行。本届艺术节以「青春·梦想·未来」为主题，涵盖歌舞、戏剧、书画、摄影等20余项活动。开幕式晚会上，原创音乐剧《追光》首演，合唱团带来改编版《夜空中最亮的星》，街舞社、汉服社联合呈现的国风街舞引爆全场。艺术节将持续一个月，为同学们搭建展示才华与交流学习的广阔舞台。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=campus%20evening%20gala%20concert%20stage%20colorful%20lighting%20performance%20students%20audience&image_size=landscape_16_9"
+    },
+    {
+      "id": 104,
+      "title": "百团大战：社团招新火热进行",
+      "category": "校园活动",
+      "date": "2026-04-08",
+      "author": "社团联合会",
+      "views": 1560,
+      "summary": "学校 120 余个学生社团齐聚主广场招新，新生流连其间，现场热闹非凡。",
+      "content": "4月8日，一年一度的「百团大战」社团招新活动在主广场拉开帷幕。全校120余个学生社团摆摊设点，涵盖学术科技、文化艺术、体育竞技、公益志愿等多个类别。机器人社团的现场演示、动漫社的cosplay巡游、吉他社的即兴弹唱吸引了大量新生驻足。社团联合会负责人介绍，今年新增了无人机社与剧本杀社，报名人数再创新高。社团活动是第二课堂的重要组成部分，欢迎同学们积极加入。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20club%20recruitment%20fair%20booths%20students%20outdoor%20sunny&image_size=landscape_16_9"
+    },
+    {
+      "id": 105,
+      "title": "图书馆开放延长至午夜 24 时",
+      "category": "校园公告",
+      "date": "2026-04-05",
+      "author": "图书馆",
+      "views": 980,
+      "summary": "为满足考研与期末复习需求，图书馆自即日起开放时间延长至每晚 24 时，并增设自习区。",
+      "content": "为更好服务广大师生学习需求，尤其是考研冲刺与期末复习阶段，图书馆自4月5日起将主馆开放时间延长至每晚24时。同时二楼自习区新增80个座位，配备护眼台灯与电源插座，并提供免费热水。图书馆倡议同学们文明自习，离座时带走个人物品，共同维护良好的学习环境。具体开放区域与预约方式请关注图书馆官方公众号。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20university%20library%20interior%20students%20reading%20bookshelves%20warm%20lighting&image_size=landscape_16_9"
+    },
+    {
+      "id": 106,
+      "title": "食堂上新：春季时令菜品好评如潮",
+      "category": "校园生活",
+      "date": "2026-04-03",
+      "author": "后勤集团",
+      "views": 3240,
+      "summary": "三食堂推出春日限定菜品，香椿炒蛋、荠菜馄饨等时令美味上线，获师生广泛好评。",
+      "content": "春日正鲜，第三食堂推出「春之味」时令菜品系列。香椿炒蛋、荠菜馄饨、春笋焖肉、艾草青团等限定菜品一经上线便广受好评。食堂王师傅介绍，所有时令食材均当日采购，保证新鲜与安全。后勤集团表示，后续将根据季节持续更新菜单，并欢迎同学们通过「意见直通车」反馈口味偏好。一起在校园里品尝春天吧！",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20cafeteria%20interior%20food%20trays%20students%20dining%20clean%20modern&image_size=landscape_16_9"
+    },
+    {
+      "id": 107,
+      "title": "志愿者走进社区开展植树活动",
+      "category": "志愿服务",
+      "date": "2026-04-01",
+      "author": "青年志愿者协会",
+      "views": 642,
+      "summary": "校青协组织 200 名志愿者赴周边社区开展植树造林活动，共栽种树苗 500 余棵。",
+      "content": "4月1日上午，校青年志愿者协会组织200名志愿者前往学校周边的幸福社区开展「植绿护绿」志愿活动。同学们分工协作，挖坑、栽苗、培土、浇水，共栽种桂花、香樟、樱花等树苗500余棵。社区工作人员对同学们的辛勤付出表示感谢。本次活动既美化了社区环境，也让同学们在实践中增强了生态保护意识与社会责任感。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20student%20volunteers%20community%20service%20planting%20trees%20outdoor&image_size=landscape_16_9"
+    },
+    {
+      "id": 108,
+      "title": "第七届互联网+创新创业大赛校赛落幕",
+      "category": "学术讲座",
+      "date": "2026-03-28",
+      "author": "创新创业学院",
+      "views": 1190,
+      "summary": "校赛共 86 个项目入围决赛，3 个项目获金奖并将代表学校冲击省赛。",
+      "content": "3月28日，第七届「互联网+」大学生创新创业大赛校内选拔赛决赛圆满落幕。本次校赛共收到报名项目312个，经初评86个项目入围决赛，涵盖人工智能、乡村振兴、绿色低碳等多个赛道。最终「智农眼——AI病虫害识别系统」等3个项目获金奖，将代表学校参加省级复赛。创新创业学院将持续为参赛团队提供导师辅导与孵化支持，助力项目落地。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20innovation%20startup%20competition%20pitch%20stage%20team%20presentation&image_size=landscape_16_9"
+    },
+    {
+      "id": 109,
+      "title": "春季校园招聘会：300 家企业进校揽才",
+      "category": "校园公告",
+      "date": "2026-04-16",
+      "author": "就业指导中心",
+      "views": 2760,
+      "summary": "2026 届毕业生春季双选会在体育馆举行，提供岗位 1.2 万个，信息技术类需求旺盛。",
+      "content": "4月16日，2026届毕业生春季校园双选会在校体育馆举行。本次招聘会吸引了来自全国各地的300家用人单位进校揽才，提供岗位约1.2万个，覆盖信息技术、智能制造、金融财会、教育培训等多个行业。就业指导中心在现场设立简历义诊与职业咨询专区，为毕业生提供一对一指导。数据显示，人工智能、软件开发、数据分析类岗位需求旺盛，平均起薪较去年上涨8%。后续更多企业宣讲安排请关注就业信息网。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20career%20job%20fair%20booths%20recruiters%20students%20interview%20indoor&image_size=landscape_16_9"
+    },
+    {
+      "id": 110,
+      "title": "校园半程马拉松开跑 2000 师生竞逐春光",
+      "category": "校园活动",
+      "date": "2026-04-18",
+      "author": "校体育部",
+      "views": 1890,
+      "summary": "第二届校园半程马拉松鸣枪开赛，路线环绕校园与环湖绿道，教职工与学生同场奔跑。",
+      "content": "4月18日清晨，第二届校园半程马拉松在东大门鸣枪开赛。本次赛事设半程马拉松（21.0975公里）与欢乐跑（5公里）两个项目，吸引2000余名师生及校友报名参加。赛道环绕校园主干道与环湖绿道，沿途设置8个补给站与医疗点，志愿者与啦啦队加油助威。经过激烈角逐，体育学院李同学以1小时15分42秒夺得男子半程组冠军。赛事展现了师生们昂扬向上的精神风貌，也让大家在奔跑中感受春日校园之美。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=campus%20half%20marathon%20runners%20jogging%20university%20road%20spring%20morning&image_size=landscape_16_9"
+    },
+    {
+      "id": 111,
+      "title": "心理健康活动周：悦纳自我 从心出发",
+      "category": "校园生活",
+      "date": "2026-04-09",
+      "author": "心理健康教育中心",
+      "views": 730,
+      "summary": "心理活动周通过团体辅导、心理影片展映、解忧信箱等活动，引导学生关注心灵成长。",
+      "content": "为普及心理健康知识，提升学生心理调适能力，心理健康教育中心于4月7日至11日举办「悦纳自我，从心出发」心理健康活动周。活动内容丰富：「解忧杂货铺」信箱收集烦恼并由专业老师回信，团体辅导工坊通过游戏帮助同学们缓解压力，心理影片展映与心理知识竞答同样人气十足。中心还提供全程免费的一对一心理咨询预约服务，提醒同学们：关注心理健康与关注身体健康同样重要，遇到困扰请主动求助。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20students%20group%20counseling%20circle%20warm%20supportive%20indoor%20soft%20light&image_size=landscape_16_9"
+    },
+    {
+      "id": 112,
+      "title": "关于 2026 年奖学金评定工作的通知",
+      "category": "校园公告",
+      "date": "2026-04-06",
+      "author": "学生工作处",
+      "views": 4120,
+      "summary": "2025-2026 学年奖学金评定启动，含国家奖学金、校级奖学金等，请按要求于 4 月 30 日前申请。",
+      "content": "各学院、全体同学：2025-2026学年学生奖学金评定工作现已启动。本次评定范围包括国家奖学金、国家励志奖学金、校级综合奖学金及单项奖学金。申请同学需符合品学兼优、无违纪记录等基本条件，学业成绩与综合测评排名要求详见《学生奖学金管理办法》。请符合条件的同学于4月30日前在学生管理系统提交申请并上传相关材料，各学院初审后于5月10日前报送学生工作处。评审坚持公开、公平、公正原则，结果将公示五个工作日。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=graduation%20academic%20awards%20certificate%20ceremony%20students%20stage%20formal&image_size=landscape_16_9"
+    },
+    {
+      "id": 113,
+      "title": "网络安全宣传周：守护你的数字生活",
+      "category": "学术讲座",
+      "date": "2026-04-02",
+      "author": "信息化建设处",
+      "views": 560,
+      "summary": "网络安全宣传周开设防诈骗讲座与实操体验，教师生识别钓鱼链接、保护个人信息。",
+      "content": "4月1日至7日是我校网络安全宣传周。信息化建设处联合属地网安部门开展系列活动：《警惕电信网络诈骗》主题讲座结合真实案例剖析刷单返利、冒充客服、AI换脸等新型骗局；体验区现场演示钓鱼链接识别、弱口令破解与公共WiFi风险，帮助师生提升安全防护技能。工作人员提醒：请妥善保管账号密码，开启双重验证，不点击来路不明的链接，遇到可疑情况及时与学校或警方联系。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cybersecurity%20awareness%20workshop%20presentation%20screen%20lock%20icon%20students&image_size=landscape_16_9"
+    },
+    {
+      "id": 114,
+      "title": "宿舍文化节：打造我们的温馨小家",
+      "category": "校园生活",
+      "date": "2026-03-30",
+      "author": "学生宿舍管理委员会",
+      "views": 920,
+      "summary": "宿舍文化节开展「最美寝室」评比、宿舍门牌设计与楼层联欢，倡导文明整洁的住宿氛围。",
+      "content": "3月30日，为期两周的宿舍文化节圆满收官。本届文化节以「寓见美好·我爱我家」为主题，开展了「最美寝室」评比、创意门牌设计、宿舍故事征集与楼层联欢晚会等活动。各寝室同学脑洞大开，国风、星空、书香等风格的装饰让人眼前一亮。经走访打分，7号楼302等10间寝室获评「最美寝室」。宿管会表示，希望同学们把活动中的热情延续到日常，共同维护整洁、文明、温馨的住宿环境。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cozy%20college%20dormitory%20room%20decorated%20students%20warm%20interior&image_size=landscape_16_9"
+    },
+    {
+      "id": 115,
+      "title": "全国大学生数学建模竞赛校队选拔赛举行",
+      "category": "学术讲座",
+      "date": "2026-03-25",
+      "author": "数学与统计学院",
+      "views": 680,
+      "summary": "数学建模校队选拔赛以 72 小时赛制进行，60 支队伍同台竞技，优胜队将参加全国赛。",
+      "content": "3月22日至25日，全国大学生数学建模竞赛校内选拔赛顺利举行。本次比赛采用72小时连续赛制，60支队伍、180名同学围绕现实问题建立模型、求解验证并撰写论文，充分锻炼了数学应用、编程实现与团队协作能力。经评委组评审，一等奖共5项，优胜队伍将进入校队集训，代表学校备战9月的全国大学生数学建模竞赛。数学与统计学院将组织赛前系列培训，欢迎对建模感兴趣的同学旁听学习。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=students%20mathematical%20modeling%20competition%20working%20laptops%20equations%20classroom&image_size=landscape_16_9"
+    },
+    {
+      "id": 116,
+      "title": "「校长杯」篮球赛决赛之夜燃爆体育馆",
+      "category": "校园活动",
+      "date": "2026-03-22",
+      "author": "校篮球协会",
+      "views": 2310,
+      "summary": "校长杯篮球赛决赛鏖战加时，信息工程学院 78:75 险胜夺冠，现场气氛沸腾。",
+      "content": "3月22日晚，「校长杯」篮球赛决赛在校体育馆上演巅峰对决。历经一个月、32场比赛的争夺，信息工程学院与机械工程学院会师决赛。双方比分交替领先，常规时间战成68平，比赛进入加时赛。关键时刻信息工程学院连续命中三分，最终以78:75险胜夺冠，15号球员当选总决赛MVP。当晚体育馆座无虚席，扣篮、盖帽与精彩配合引得全场欢呼。一年一度的校长杯为同学们奉献了难忘的篮球之夜。",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20basketball%20game%20final%20indoor%20court%20players%20crowd%20cheering&image_size=landscape_16_9"
+    }
+  ],
+  "categories": ["全部", "校园活动", "学术讲座", "校园公告", "校园生活", "志愿服务"],
+  "stats": {
+    "title": "本周校园活动统计",
+    "labels": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+    "values": [12, 18, 9, 22, 15, 28, 20]
+  }
+}
