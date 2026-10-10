@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="校园资讯列表——支持搜索、分类筛选、排序，并可发布、编辑、删除资讯（数据本地持久化）" />
+  <title>资讯列表 - 校园生活助手</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ 头部导航 ============ -->
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">
+        <span class="logo-icon">🎓</span>
+        <span>校园生活助手</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="index.html">首页</a>
+        <a href="list.html">资讯</a>
+        <a href="list.html?category=校园活动&v=2">活动</a>
+        <a href="list.html?category=学术讲座&v=2">讲座</a>
+        <a href="list.html?category=校园公告&v=2">公告</a>
+        <a href="list.html?category=校园生活&v=2">生活</a>
+        <a href="list.html?category=志愿服务&v=2">志愿</a>
+      </nav>
+      <!-- 登录态区域：由 common.js 渲染 -->
+      <div class="auth-area" id="authArea"></div>
+    </div>
+  </header>
+
+  <!-- ============ 主区域 ============ -->
+  <main class="container">
+
+    <h1 class="page-title">校园资讯</h1>
+    <p class="page-subtitle">浏览、搜索、筛选校园动态，并可发布你自己的资讯（保存到本地）</p>
+
+    <!-- 工具栏：搜索 + 分类筛选 + 排序 + 新增 -->
+    <div class="toolbar" role="search">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input id="searchInput" type="search" placeholder="搜索标题 / 摘要 / 作者" aria-label="搜索资讯" />
+      </div>
+      <div class="filter-row">
+        <div id="categoryBox" class="filter-row" style="gap:8px" role="group" aria-label="分类筛选"></div>
+        <select id="sortSelect" class="sort-select" aria-label="排序方式">
+          <option value="date">最新发布</option>
+          <option value="views">最多浏览</option>
+        </select>
+        <button class="btn btn-primary btn-sm" id="addBtn">＋ 发布</button>
+      </div>
+    </div>
+
+    <p id="resultCount" style="font-size:0.82rem;color:var(--color-text-light);margin-bottom:10px"></p>
+
+    <!-- 资讯列表（JS 动态渲染） -->
+    <div class="article-list" id="articleBox"></div>
+
+  </main>
+
+  <!-- ============ 底部栏 ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">校园生活助手 Campus Life Assistant</div>
+        <p class="footer-desc">面向高校师生的校园资讯聚合工具，HTML5 + CSS3 + 原生 JavaScript 实现，数据本地持久化。</p>
+        <nav class="footer-links" aria-label="页脚导航">
+          <a href="index.html">首页</a>
+          <a href="list.html">资讯列表</a>
+          <a href="detail.html?id=101">详情示例</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        © 2026 校园生活助手 · HTML5 实训项目 · 仅供教学演示
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部 -->
+  <button class="back-top" aria-label="返回顶部">↑</button>
+
+  <!-- 移动端底部 Tab 导航 -->
+  <nav class="tabbar" aria-label="底部导航">
+    <a href="index.html"><span class="tb-icon">🏠</span>首页</a>
+    <a href="list.html"><span class="tb-icon">📰</span>资讯</a>
+    <a href="list.html?category=校园活动&v=2"><span class="tb-icon">🎉</span>活动</a>
+    <a href="detail.html?id=106"><span class="tb-icon">🔖</span>示例</a>
+  </nav>
+
+  <!-- ============ 发布/编辑表单模态框 ============ -->
+  <div class="modal-mask" id="formMask" role="dialog" aria-modal="true" aria-labelledby="formTitle">
+    <div class="modal">
+      <div class="modal-head">
+        <h3 id="formTitle">发布新资讯</h3>
+        <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+      </div>
+      <form id="articleForm" novalidate>
+        <!-- 隐藏 id 字段，用于区分新增/编辑 -->
+        <input type="hidden" name="id" />
+        <div class="form-group" data-field="title">
+          <label for="f-title">标题 <span class="req">*</span></label>
+          <input id="f-title" name="title" type="text" maxlength="30" placeholder="2-30 字" />
+          <div class="err-msg"></div>
+        </div>
+        <div class="form-group" data-field="category">
+          <label for="f-category">分类 <span class="req">*</span></label>
+          <select id="f-category" name="category">
+            <option value="">请选择分类</option>
+            <option>校园活动</option>
+            <option>学术讲座</option>
+            <option>校园公告</option>
+            <option>校园生活</option>
+            <option>志愿服务</option>
+          </select>
+          <div class="err-msg"></div>
+        </div>
+        <div class="form-group" data-field="author">
+          <label for="f-author">作者 <span class="req">*</span></label>
+          <input id="f-author" name="author" type="text" maxlength="20" placeholder="2-20 字" />
+          <div class="err-msg"></div>
+        </div>
+        <div class="form-group" data-field="contact">
+          <label for="f-contact">联系方式</label>
+          <input id="f-contact" name="contact" type="text" placeholder="邮箱或手机号（选填，填写则需合法）" />
+          <div class="hint">用于读者联系，可选；如填写需符合邮箱或手机格式</div>
+          <div class="err-msg"></div>
+        </div>
+        <div class="form-group" data-field="summary">
+          <label for="f-summary">摘要 <span class="req">*</span></label>
+          <textarea id="f-summary" name="summary" maxlength="100" placeholder="10-100 字"></textarea>
+          <div class="err-msg"></div>
+        </div>
+        <div class="form-group" data-field="content">
+          <label for="f-content">正文 <span class="req">*</span></label>
+          <textarea id="f-content" name="content" maxlength="500" placeholder="20-500 字，可换行分段"></textarea>
+          <div class="err-msg"></div>
+        </div>
+        <div class="form-group" data-field="image">
+          <label for="f-image">封面图链接</label>
+          <input id="f-image" name="image" type="url" placeholder="https://... 留空将自动生成" />
+          <div class="hint">选填，不填则自动分配默认封面</div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-ghost" id="modalClose2">取消</button>
+          <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ES6 模块 -->
+  <script type="module" src="js/list.js?v=2"></script>
+  <script>
+    // 关闭按钮（表单底部）与遮罩关闭统一处理
+    document.getElementById('modalClose2').addEventListener('click', function () {
+      document.getElementById('formMask').classList.remove('show');
+    });
+  </script>
+</body>
+</html>
